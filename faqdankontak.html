@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Risken Shoes - Hubungi Kami</title>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background-color: #ffffff;
+    }
+
+    header {
+        background-color: #ffffff;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .navbar .logo {
+        font-size: 30px;
+        font-weight: 600;
+        color: #4a90e2;
+    }
+
+    .navbar nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar nav a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 400;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+
+    }
+
+    .navbar nav a:hover,
+    .navbar nav a.active {
+        border-bottom: 2px solid #4a90e2;
+        color: #4a90e2;
+    }
+
+
+    .profile {
+        width: 40px;
+        height: 40px;
+        background-color: #ddd;
+        border-radius: 50%;
+        margin-left: 20px;
+    }
+
+    .logout {
+        background: red;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .logout:hover {
+      background: #c82333;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: 50px auto;
+    }
+
+    .contact {
+        flex: 1;
+        margin-right: 80px;
+    }
+
+    .faq {
+        flex: 1;
+        margin-left: 80px; 
+    }
+
+    h2 {
+        color: #4a90e2;
+        margin-bottom: 15px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .faq-item {
+        margin-bottom: 15px;
+        padding: 10px;
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .container {
+        flex-direction: column;
+        }
+
+    .form-container, .info-panel {
+        width: 100%;
+    }
+    }
+    
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><b>Risken Shoes</b></div>
+            <nav>                
+                <a href="home.html">Home</a>
+                <a href="produk.html">Produk</a>
+                <a href="faqdankontak.html">FAQ & Layanan</a>
+                <a href="profile.html">Profile</a>
+                <button class="logout" onclick="logout()">Logout</button>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="content">
+        <div class="contact">
+            <h2>Hubungi Kami</h2>
+            <form id="form-contact">
+                <input type="text" name="nama" placeholder="Nama Anda" required>
+                <input type="email" name="email" placeholder="Email Anda" required>
+                <textarea name="pesan" placeholder="Masukkan Pesan Anda" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+
+            <div id="popup-pesan" style="display:none; position:fixed; top:20px; right:20px; background:#4a90e2; color:white; padding:15px 20px; border-radius:5px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:999;">
+                Pesan Anda telah dikirim!
+            </div>
+
+
+        </div>
+
+        <div class="faq" onclick="faq()">
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <div class="faq-item">
+                <h3>Risken Shoes itu toko apa?</h3>
+                <p>Risken Shoes adalah toko sepatu online dengan pilihan harga terjangkau dan pengiriman cepat. Cocok buat yang ingin beli sepatu tanpa ribet.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Apakah bisa bayar di tempat (COD)?</h3>
+                <p>Untuk saat ini, kami hanya melayani pembayaran melalui transfer bank atau e-wallet. Namun, kami sedang pertimbangkan fitur COD ke depannya.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Berapa lama pengiriman sepatu?</h3>
+                <p>Pengiriman biasanya memakan waktu 2-4 hari kerja tergantung lokasi Anda. Kami usahakan secepat mungkin!</p>
+            </div>
+            <div class="faq-item">
+                <h3>Kalau ukuran tidak pas, bisa ditukar?</h3>
+                <p>Bisa, selama sepatu belum dipakai dan masih dalam kondisi lengkap. Silakan hubungi kami maksimal 3 hari setelah barang diterima.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Bagaimana cara menghubungi customer service?</h3>
+                <p>Anda bisa kirim pesan melalui formulir di samping atau email kami di Riskenshoes@mail.com. Kami akan balas secepatnya.</p>
+            </div>\
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

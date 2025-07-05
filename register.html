@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risken Shoes - Daftar</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #eef3fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .form-container h1 {
+            color: #4a90e2;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            background-color: #f0f4fa;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .btn {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #357ac8;
+        }
+
+        .mt-3 {
+            margin-top: 16px;
+            font-size: 14px;
+        }
+
+        .mt-3 a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .mt-3 a:hover {
+            text-decoration: underline;
+        }
+
+        .info-panel {
+            flex: 1;
+            background-color: #4a90e2;
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-panel h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .info-panel p {
+            font-size: 16px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .form-container, .info-panel {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Register Form -->
+        <div class="form-container">
+            <h1>Buat Akun</h1>
+            <form id="form-register" action="login.html">
+                <div class="form-group">
+                    <input type="text" name="nama_lengkap" class="form-control" placeholder="Nama Lengkap" required>
+                </div>    
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                </div>    
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="no_telp" class="form-control" placeholder="No. Telp" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn" value="Daftar">
+                </div>
+                <p class="mt-3">Sudah punya akun? <a href="login.html">Login di sini</a></p>
+            </form>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="info-panel">
+            <h2>Buat Akun dan Mulai Perjalanan Belanjamu Sekarang!</h2>
+            <p>Dengan satu akun, kamu bisa berbelanja dengan mudah, 
+               dan mengatur data pembelianmu secara praktis. Daftar sekarang dan rasakan 
+               kemudahannya bersama Risken Shoes.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
